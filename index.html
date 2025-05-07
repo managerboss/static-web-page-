@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official website of Mbeya University of Science and Technology (MUST)">
+  <title>Mbeya University of Science and Technology (MUST)</title>
+  <style>
+    :root {
+      --primary: #003366;
+      --secondary: #e67e22;
+      --light: #f5f5f5;
+      --dark: #2c3e50;
+      --text: #333333;
+      --background: #ffffff;
+      --box-color: #f4f4f4;
+      --research-box: #e9f7fc;
+      --opportunity-box: #ffe6cc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background-color: var(--light);
+      font-size: 1.3rem;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #002244);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3.5rem; /* Increase font size for better visibility */
+      font-weight: 700;
+      color: white;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      color: white;
+      margin-top: 1rem;
+    }
+
+    .container {
+      width: 95%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      height: 120px;
+      margin-bottom: 1.5rem;
+    }
+
+    nav {
+      background-color: var(--dark);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      padding: 1.2rem 2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.3rem;
+      transition: color 0.3s;
+      letter-spacing: 0.5px;
+    }
+
+    nav a:hover {
+      color: var(--secondary);
+    }
+
+    main {
+      padding: 3rem 0;
+    }
+
+    section {
+      margin: 2.5rem 0;
+      padding: 2.5rem;
+      background: var(--background);
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    h1, h2, h3 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      border-bottom: 3px solid var(--secondary);
+      padding-bottom: 0.8rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-top: 2rem;
+      color: var(--primary);
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      font-size: 1.3rem;
+      line-height: 1.8;
+    }
+
+    ul {
+      margin-bottom: 1.5rem;
+      padding-left: 2rem;
+    }
+
+    li {
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #004080;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--secondary);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      margin-top: 1.5rem;
+      transition: all 0.3s;
+      font-size: 1.3rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .btn:hover {
+      background: #d35400;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 2rem;
+      transition: all 0.3s;
+      background: var(--background);
+      display: flex;
+      flex-direction: column;
+      min-height: 300px;
+    }
+
+    .card-content {
+      flex-grow: 1;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      border-color: var(--secondary);
+    }
+
+    .info-box {
+      background-color: var(--box-color);
+      border-left: 5px solid var(--secondary);
+      padding: 1.8rem 2rem;
+      border-radius: 6px;
+      margin-top: 1rem;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .research-box {
+      background-color: var(--research-box);
+    }
+
+    .opportunity-box {
+      background-color: var(--opportunity-box);
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 3rem 0;
+      margin-top: 3rem;
+    }
+
+    footer p {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card-container {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <img src="https://www.must.ac.tz/assets/images/must-logo.png" alt="MUST Logo" class="logo">
+      <h1>Mbeya University of Science and Technology</h1>
+      <p>Excellence in Science, Technology and Innovation</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About MUST</a></li>
+      <li><a href="#programs">Academic Programs</a></li>
+      <li><a href="#admission">Admissions</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section id="about">
+      <h2>About MUST</h2>
+      <div class="info-box">
+        <p>
+          Mbeya University of Science and Technology (MUST) is a public university located in the Southern Highlands of Tanzania.
+          It is dedicated to fostering scientific and technological innovation for socio-economic transformation.
+        </p>
+        <p>
+          MUST offers quality training, research, and consultancy services. The university is committed to producing highly competent professionals who can meet the demands of a fast-evolving global environment.
+        </p>
+      </div>
+    </section>
+
+    <section id="programs">
+      <h2>Academic Programs</h2>
+      <div class="info-box">
+        <p>Explore the wide variety of programs at MUST:</p>
+        <ul>
+          <li>BSc in Computer Engineering</li>
+          <li>BSc in Electrical and Electronics Engineering</li>
+          <li>BSc in Mechanical Engineering</li>
+          <li>BSc in Civil Engineering</li>
+          <li>Diploma in Laboratory Technology</li>
+          <li>Diploma in Information and Communication Technology (ICT)</li>
+          <li>Master of Engineering Management</li>
+          <li>Postgraduate Diploma in Technical Education</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="admission">
+      <h2>Admissions</h2>
+      <div class="info-box">
+        <p>
+          Admission to MUST is open to students who meet the minimum qualifications as outlined by TCU and NACTE regulations.
+          Both Tanzanian and international students are welcome to apply.
+        </p>
+        <ul>
+          <li>Certificate and Diploma Admissions: CSEE with passes in key subjects including Mathematics and Science.</li>
+          <li>Undergraduate Admissions: Two principal passes in relevant subjects and minimum GPA requirements.</li>
+          <li>Postgraduate Admissions: Accredited Bachelor’s Degree with a minimum GPA of 2.7.</li>
+        </ul>
+        <p>
+          Applications are made online through the university's admission portal during advertised periods.
+        </p>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research and Innovation</h2>
+      <p>MUST is committed to advancing knowledge through cutting-edge research and fostering innovation across industries.</p>
+
+      <div class="card-container">
+        <div class="card research-box">
+          <div class="card-content">
+            <h3>Research Centers</h3>
+            <ul>
+              <li>Center for ICT Development</li>
+              <li>Renewable Energy and Technology Center</li>
+              <li>Environmental Research and Innovation Unit</li>
+              <li>Industrial Innovation and Incubation Hub</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card opportunity-box">
+          <div class="card-content">
+            <h3>Research Opportunities</h3>
+            <ul>
+              <li>Undergraduate Research Projects</li>
+              <li>Graduate Research Fellowships</li>
+              <li>National and International Research Grants</li>
+              <li>Partnerships with Industry and NGOs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="info-box">
+        <p>Have questions? Get in touch with us:</p>
+        <ul>
+          <li>Email: info@must.ac.tz</li>
+          <li>Phone: +255 25 295 7544</li>
+          <li>Postal Address: P.O. Box 131, Mbeya, Tanzania</li>
+          <li>Website: <a href="http://www.must.ac.tz" target="_blank">www.must.ac.tz</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Mbeya University of Science and Technology (MUST). All rights reserved.</p>
+    <p>Developed by the MUST Web Team</p>
+  </footer>
+</body>
+</html>
